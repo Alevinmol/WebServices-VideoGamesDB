@@ -1,0 +1,57 @@
+[
+    {
+    "gameTitle": "Dreamlight Valley",
+    "console(s)": "Switch, Steam App, Xbox X/S, Playstation 5",
+    "developer": "Gameloft",
+    "publisher": "Gameloft",
+    "genre": "Action, Adventure, Casual, RPG, Simulation",
+    "shortSummary": "Explore a world filled with the magic of Disney as you discover rich stories and build the perfect neighborhood alongside Disney and Pixar heroes and villains in this new life-sim adventure game. Welcome to Disney Dreamlight Valley.",
+    "rating": "3.2 Stars",
+    "releaseDate": "09/06/2022",
+    "recommended": "yes or no"
+    },
+    {
+    "gameTitle": "The Legend of Zelda: Breath of the Wild",
+    "console(s)": "Switch",
+    "developer": "Nintendo",
+    "publisher": "Nintendo",
+    "genre": " Action, Adventure, RPG, Other",
+    "shortSummary": "Forget everything you know about The Legend of Zelda games. Step into a world of discovery, exploration, and adventure in The Legend of Zelda: Breath of the Wild, a boundary-breaking new game in the acclaimed series. Travel across vast fields, through forests, and to mountain peaks as you discover what has become of the kingdom of Hyrule in this stunning open-air adventure.",
+    "rating": "4.9 Stars",
+    "releaseDate": "03/03/2017",
+    "recommended": "yes or no"
+    },
+    {
+       "gameTitle": "Pikmin 4",
+       "console(s)": "Switch",
+       "developer": "Nintendo",
+       "publisher": "Nintendo",
+       "genre": "Action, Adventure, Strategy",
+       "shortSummary": "Meet Pikmin: small, plantlike creatures with distinct abilities that you can grow, pluck, guide, and overpower enemies with! Use your Pikmin’s miniature might (and a bit of strategy) to explore this mysterious planet in search of your crew—and treasure.",
+       "rating": "3.8 Stars",
+       "releaseDate": "07/21/2023",
+       "recommended": "yes or no"
+    },
+    {
+        "gameTitle": "",
+        "console(s)": "",
+        "developer": "",
+        "publisher": "",
+        "genre": "",
+        "shortSummary": "",
+        "rating": "",
+        "releaseDate": "",
+        "recommended": "yes or no"
+     },
+     {
+        "gameTitle": "",
+        "console(s)": "",
+        "developer": "",
+        "publisher": "",
+        "genre": "",
+        "shortSummary": "",
+        "rating": "",
+        "releaseDate": "",
+        "recommended": "yes or no"
+     }
+    ]
