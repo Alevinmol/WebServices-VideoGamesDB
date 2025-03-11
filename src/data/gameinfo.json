@@ -1,7 +1,7 @@
 [
     {
     "gameTitle": "Dreamlight Valley",
-    "console(s)": "Switch, Steam App, Xbox X/S, Playstation 5",
+    "console(s)": "Switch, Steam App, Xbox Series X/S, Playstation 5, Playstation 4",
     "developer": "Gameloft",
     "publisher": "Gameloft",
     "genre": "Action, Adventure, Casual, RPG, Simulation",
@@ -33,25 +33,25 @@
        "recommended": "yes or no"
     },
     {
-        "gameTitle": "",
-        "console(s)": "",
-        "developer": "",
-        "publisher": "",
-        "genre": "",
-        "shortSummary": "",
-        "rating": "",
-        "releaseDate": "",
+        "gameTitle": "Call of Duty: Black Ops 6",
+        "console(s)": "Steam App, Xbox Series X/S, Playstation 5, Pkaystation 4",
+        "developer": "Treyarch and Raven Software",
+        "publisher": "Activision",
+        "genre": "Action",
+        "shortSummary": "Call of Duty®: Black Ops 6 is signature Black Ops across a cinematic single-player Campaign, a best-in-class Multiplayer experience and with the epic return of Round-Based Zombies.",
+        "rating": "2.1 Stars",
+        "releaseDate": "10/24/2024",
         "recommended": "yes or no"
      },
      {
-        "gameTitle": "",
-        "console(s)": "",
-        "developer": "",
-        "publisher": "",
-        "genre": "",
-        "shortSummary": "",
-        "rating": "",
-        "releaseDate": "",
+        "gameTitle": "Ale & Tale Tavern",
+        "console(s)": "Steam App",
+        "developer": "Scienart Games",
+        "publisher": "GrabTheGames and UpgradePoint",
+        "genre": "Action, Adventure, Casual, Indie, Simulation",
+        "shortSummary": "Get ready for a thrilling mix of genres: a cooperative, first-person, open-world fantasy tavern simulator, action, fishing, hunting, exploration, and completing fun and diverse quests. And, of course, COOKING! Play with friends, feed and quench the thirst of the entire world!",
+        "rating": "4.0 Stars",
+        "releaseDate": "09/05/2024",
         "recommended": "yes or no"
      }
     ]
