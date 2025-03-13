@@ -1,0 +1,27 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.2.0",
+    "title": "CSE 341 Final Video Game API",
+    "description": "Project API for BYU-Idaho CSE 341 Winter 2025",
+    "contact": {
+      "name": "API Support - Casey Heyrend, Daniel Emerson, and Alejandro Vinay Mollinedo ",
+      "email": "hey12008@byui.edu, @byui.edu, and  @byui.edu"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/license/mit"
+    }
+  },
+  "servers": [
+    {
+      "url": "",
+      "description": "Production server"
+    },
+    {
+      "url": "http://localhost:8080",
+      "description": "Local development server"
+    }
+  ],
+  "paths": {}
+}

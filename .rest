@@ -1,0 +1,15 @@
+### Create contact
+PUT http://localhost:8080/api/games HTTP/1.1
+Content-Type: application/json
+
+{
+    "gameTitle": "The Legend of Zelda: Breath of the Wild",
+    "consoles": ["Switch"],
+    "developer": "Nintendo",
+    "publisher": "Nintendo",
+    "genre": ["Action", "Adventure", "RPG"],
+    "shortSummary": "An open-world Zelda game with exploration and adventure.",
+    "rating": "4.9 Stars",
+    "releaseDate": "2017-03-03",
+    "recommended": "yes"
+}
