@@ -23,10 +23,10 @@
     },
     {
        "gameTitle": "Pikmin 4",
-       "console(s)": "Switch",
+       "console(s)": ["Switch"],
        "developer": "Nintendo",
        "publisher": "Nintendo",
-       "genre": "Action, Adventure, Strategy",
+       "genre": ["Action, Adventure, Strategy"],
        "shortSummary": "Meet Pikmin: small, plantlike creatures with distinct abilities that you can grow, pluck, guide, and overpower enemies with! Use your Pikmin’s miniature might (and a bit of strategy) to explore this mysterious planet in search of your crew—and treasure.",
        "rating": "3.8 Stars",
        "releaseDate": "07/21/2023",
