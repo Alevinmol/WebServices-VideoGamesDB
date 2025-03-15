@@ -32,8 +32,10 @@ app.use("/api", require("./src/routes/games"));
 
 
 // local mongodb connection and server start
+
 connectDB().then(() => {
   app.listen(port, () => {
-      console.log(`Server running on port ${port}`);
-  });
-});
+    console.log(`Server running on port ${port}`); 
+  })
+}
+);
