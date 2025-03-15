@@ -23,7 +23,25 @@ const doc = {
         url: "http://localhost:8080",
         description: "Local development server",
       }
-    ]
+    ],
+  "tags": [
+  {
+    "name": "Games",
+    "description": "Operations about Video Games"
+  },
+  {
+    "name": "Users",
+    "description": "Operations about Users"
+  },
+  {
+    "name": "Consoles",
+    "description": "Operations about Consoles"
+  },
+  {
+    "name": "Copies",
+    "description": "Operations about Copies"
+  }
+], 
   };
   
   // Output file

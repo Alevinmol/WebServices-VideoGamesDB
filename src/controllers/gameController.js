@@ -1,7 +1,13 @@
 const Game = require("../models/game");
 
+
 // Controller to add or update a game
 exports.addOrUpdateGame = async (req, res) => {
+        /*
+    #swagger.summary = "Add or Update a Game"
+    #swagger.description = "Endpoint to add or update a game in the database."
+    #swagger.tags = ['Games']
+    */
     try {
         const { gameTitle, consoles, developer, publisher, genre, shortSummary, rating, releaseDate, recommended } = req.body;
 
