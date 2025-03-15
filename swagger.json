@@ -42,7 +42,7 @@
     }
   ],
   "paths": {
-    "/games": {
+    "/api/games": {
       "put": {
         "tags": [
           "Games"
