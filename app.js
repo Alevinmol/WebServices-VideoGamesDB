@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const MongoClient = require("mongodb").MongoClient;
+const MongoClient = require("mongoose").MongoClient;
 
 
 
@@ -29,15 +29,28 @@ app.use("/", require("./src/routes"));
 app.use("/api", require("./src/routes/games"));
 app.use(express.static("public"));
 
-
+// Error handling
+// 404 Not Found
+app.use((req, res) => {
+  res.status(404).json({ error: "Route not found" });
+}
+);
+// global error handler
+app.use((error, req, res, next) => {
+  console.error(error);
+  res.status(500).json({ message: "An unexpected error occurred.", error: error.message });
+});
 
 
 
 // local mongodb connection and server start
 
 connectDB().then(() => {
-  app.listen(port, () => {
+    app.listen(port);
     console.log(`Server running on port ${port}`); 
-  })
-}
+  }
+).catch((err) => {
+    console.error(err);
+    process.exit(1);
+  }
 );

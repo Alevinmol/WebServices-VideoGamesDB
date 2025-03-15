@@ -13,12 +13,12 @@ const gameSchema = new mongoose.Schema({
 });
 
 // Pre-save hook to convert "recommended" field to boolean
-gamesInfoSchema.pre("save", function (next) {
+gameSchema.pre("save", function (next) {
     if (typeof this.recommended === "string") {
         this.recommended = this.recommended.toLowerCase() === "yes";
     }
     next();
 });
 
-const GamesInfo = mongoose.model("gamesInfo", gamesInfoSchema);
+const Game = mongoose.model("gamesInfo", gameSchema);
 module.exports = Game;
