@@ -1,8 +1,8 @@
 const Game = require("../models/game");
 
-
+const gameController = {}
 // Controller to add or update a game
-exports.addOrUpdateGame = async (req, res) => {
+gameController.addOrUpdateGame = async (req, res) => {
         /*
     #swagger.summary = "Add or Update a Game"
     #swagger.description = "Endpoint to add or update a game in the database."
@@ -48,3 +48,4 @@ exports.addOrUpdateGame = async (req, res) => {
         res.status(500).json({ error: "Internal Server Error" });
     }
 };
+module.exports = gameController;
