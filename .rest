@@ -11,5 +11,5 @@ Content-Type: application/json
     "shortSummary": "crazy game",
     "rating": "4.9 Stars",
     "releaseDate": "2017-03-03",
-    "recommended": "no"
+    "recommended": "yes"
 }
