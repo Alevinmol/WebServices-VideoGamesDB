@@ -16,7 +16,7 @@ const doc = {
     },
     servers: [
       {
-        url: "",
+        url: "https://webservices-videogamesdb-age0.onrender.com",
         description: "Production server",
       },
       {

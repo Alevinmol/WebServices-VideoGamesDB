@@ -15,7 +15,7 @@
   },
   "servers": [
     {
-      "url": "",
+      "url": "https://webservices-videogamesdb-age0.onrender.com",
       "description": "Production server"
     },
     {
@@ -42,13 +42,23 @@
     }
   ],
   "paths": {
-    "/api/games": {
+    "/{id}": {
       "put": {
         "tags": [
           "Games"
         ],
         "summary": "Add or Update a Game",
         "description": "Endpoint to add or update a game in the database.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"

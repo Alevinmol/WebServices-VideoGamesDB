@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const gameSchema = new mongoose.Schema({
+const gamesInfoSchema = new mongoose.Schema({
     gameTitle: { type: String, required: true },
     consoles: [{ type: String }],  // Array of consoles
     developer: { type: String },
@@ -21,4 +21,4 @@ gamesInfoSchema.pre("save", function (next) {
 });
 
 const GamesInfo = mongoose.model("gamesInfo", gamesInfoSchema);
-module.exports = Game;
+module.exports = GamesInfo;
