@@ -1,5 +1,5 @@
 [
-    {
+  {
     "gameTitle": "Dreamlight Valley",
     "console(s)": "Switch, Steam App, Xbox Series X/S, Playstation 5, Playstation 4",
     "developer": "Gameloft",
@@ -9,8 +9,8 @@
     "rating": "3.2 Stars",
     "releaseDate": "09/06/2022",
     "recommended": "yes or no"
-    },
-    {
+  },
+  {
     "gameTitle": "The Legend of Zelda: Breath of the Wild",
     "console(s)": "Switch",
     "developer": "Nintendo",
@@ -20,38 +20,49 @@
     "rating": "4.9 Stars",
     "releaseDate": "03/03/2017",
     "recommended": "yes or no"
-    },
-    {
-       "gameTitle": "Pikmin 4",
-       "console(s)": ["Switch"],
-       "developer": "Nintendo",
-       "publisher": "Nintendo",
-       "genre": ["Action, Adventure, Strategy"],
-       "shortSummary": "Meet Pikmin: small, plantlike creatures with distinct abilities that you can grow, pluck, guide, and overpower enemies with! Use your Pikmin’s miniature might (and a bit of strategy) to explore this mysterious planet in search of your crew—and treasure.",
-       "rating": "3.8 Stars",
-       "releaseDate": "07/21/2023",
-       "recommended": "yes or no"
-    },
-    {
-        "gameTitle": "Call of Duty: Black Ops 6",
-        "console(s)": "Steam App, Xbox Series X/S, Playstation 5, Pkaystation 4",
-        "developer": "Treyarch and Raven Software",
-        "publisher": "Activision",
-        "genre": "Action",
-        "shortSummary": "Call of Duty®: Black Ops 6 is signature Black Ops across a cinematic single-player Campaign, a best-in-class Multiplayer experience and with the epic return of Round-Based Zombies.",
-        "rating": "2.1 Stars",
-        "releaseDate": "10/24/2024",
-        "recommended": "yes or no"
-     },
-     {
-        "gameTitle": "Ale & Tale Tavern",
-        "console(s)": "Steam App",
-        "developer": "Scienart Games",
-        "publisher": "GrabTheGames and UpgradePoint",
-        "genre": "Action, Adventure, Casual, Indie, Simulation",
-        "shortSummary": "Get ready for a thrilling mix of genres: a cooperative, first-person, open-world fantasy tavern simulator, action, fishing, hunting, exploration, and completing fun and diverse quests. And, of course, COOKING! Play with friends, feed and quench the thirst of the entire world!",
-        "rating": "4.0 Stars",
-        "releaseDate": "09/05/2024",
-        "recommended": "yes or no"
-     }
-    ]
+  },
+  {
+    "gameTitle": "Pikmin 4",
+    "console(s)": ["Switch"],
+    "developer": "Nintendo",
+    "publisher": "Nintendo",
+    "genre": ["Action, Adventure, Strategy"],
+    "shortSummary": "Meet Pikmin: small, plantlike creatures with distinct abilities that you can grow, pluck, guide, and overpower enemies with! Use your Pikmin’s miniature might (and a bit of strategy) to explore this mysterious planet in search of your crew—and treasure.",
+    "rating": "3.8 Stars",
+    "releaseDate": "07/21/2023",
+    "recommended": "yes or no"
+  },
+  {
+    "gameTitle": "Call of Duty: Black Ops 6",
+    "console(s)": "Steam App, Xbox Series X/S, Playstation 5, Pkaystation 4",
+    "developer": "Treyarch and Raven Software",
+    "publisher": "Activision",
+    "genre": "Action",
+    "shortSummary": "Call of Duty®: Black Ops 6 is signature Black Ops across a cinematic single-player Campaign, a best-in-class Multiplayer experience and with the epic return of Round-Based Zombies.",
+    "rating": "2.1 Stars",
+    "releaseDate": "10/24/2024",
+    "recommended": "yes or no"
+  },
+  {
+    "gameTitle": "Ale & Tale Tavern",
+    "console(s)": "Steam App",
+    "developer": "Scienart Games",
+    "publisher": "GrabTheGames and UpgradePoint",
+    "genre": "Action, Adventure, Casual, Indie, Simulation",
+    "shortSummary": "Get ready for a thrilling mix of genres: a cooperative, first-person, open-world fantasy tavern simulator, action, fishing, hunting, exploration, and completing fun and diverse quests. And, of course, COOKING! Play with friends, feed and quench the thirst of the entire world!",
+    "rating": "4.0 Stars",
+    "releaseDate": "09/05/2024",
+    "recommended": "yes or no"
+  },
+  {
+    "gameTitle": "Xenoblade",
+    "consoles": ["Switch", "steam"],
+    "developer": "Monolith",
+    "publisher": "Nintendo",
+    "genre": ["Action", "Adventure", "Strategy"],
+    "shortSummary": "crazy game",
+    "rating": "4.9 Stars",
+    "releaseDate": "2017-03-03",
+    "recommended": "yes"
+  }
+]

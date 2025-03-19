@@ -5,7 +5,7 @@ Content-Type: application/json
 {
     "gameTitle": "Xenoblade",
     "consoles": ["Switch","steam"],
-    "developer": "Nintendo",
+    "developer": "Monolith",
     "publisher": "Nintendo",
     "genre": ["Action", "Adventure", "Strategy"],
     "shortSummary": "crazy game",
