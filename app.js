@@ -27,6 +27,8 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 // Routes
 app.use("/", require("./src/routes"));
 app.use("/games", require("./src/routes/games"));
+app.use("/consoles", require("./src/routes/consoles"));
+
 app.use(express.static("public"));
 
 // Error handling

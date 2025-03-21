@@ -6,12 +6,15 @@ const userController = require("../controllers/userController");
 router.get("/", userController.getAllUsers);
 
 // Get a user by ID
-router.get("/:id", userController.getUser);
+router.get("/:username", userController.getUser);
 
 // Add or update a user
 router.post("/", userController.addOrUpdateUser);
 
+// Update a user by ID
+router.put("/:username", userController.addOrUpdateUser);
+
 // Delete a user by ID
-router.delete("/:id", userController.deleteUser);
+router.delete("/:username", userController.deleteUser);
 
 module.exports = router;
