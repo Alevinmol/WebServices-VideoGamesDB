@@ -3,7 +3,7 @@ const User = require("../models/users");
 const bcrypt = require("bcrypt");
 
 
-const usersController = {};
+const usersController = {}
 
 // Get all users
 usersController.getAllUsers = async (req, res) => {
