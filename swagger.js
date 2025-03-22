@@ -16,7 +16,8 @@ const doc = {
     },
     servers: [
       {
-        url: "https://webservices-videogamesdb-age0.onrender.com",
+        url: "https://webservices-videogamesdb-age0.onrender.com",// Add your production domain here
+        // https://webservices-videogamesdb.onrender.com - Casey
         description: "Production server",
       },
       {
