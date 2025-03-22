@@ -15,7 +15,7 @@
   },
   "servers": [
     {
-      "url": "https://webservices-videogamesdb.onrender.com",
+      "url": "https://webservices-videogamesdb-age0.onrender.com",
       "description": "Production server"
     },
     {

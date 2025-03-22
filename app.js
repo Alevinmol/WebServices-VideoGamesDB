@@ -26,7 +26,9 @@ app.use(bodyParser.json());
 // CORS
 app.use((req, res, next) => {
   const allowedOrigin =
-    process.env.NODE_ENV === "production" ? "https://webservices-videogamesdb.onrender.com" : "http://localhost:8080";// Add your production domain here
+    process.env.NODE_ENV === "production" ? "https://webservices-videogamesdb-age0.onrender.com" : "http://localhost:8080";// Add your production domain here
+    // https://webservices-videogamesdb.onrender.com - Casey
+    // https://webservices-videogamesdb-age0.onrender.com - Team
     res.setHeader("Access-Control-Allow-Origin", allowedOrigin);
     res.setHeader("Access-Control-Allow-allowedOrigin", allowedOrigin);
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
