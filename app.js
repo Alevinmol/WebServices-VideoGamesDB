@@ -1,7 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const MongoClient = require("mongoose").MongoClient;
-
+const router = express.Router();
+const cors = require("cors");
 
 
 // From env flie
@@ -16,6 +17,7 @@ const connectDB = require("./src/database/connnect");
 
 // Express
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 
 
@@ -28,6 +30,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use("/", require("./src/routes"));
 app.use("/games", require("./src/routes/games"));
 app.use("/consoles", require("./src/routes/consoles"));
+app.use("/users", require("./src/routes/users"));
 
 app.use(express.static("public"));
 
