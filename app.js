@@ -1,9 +1,8 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const MongoClient = require("mongoose").MongoClient;
-const router = express.Router();
 const cors = require("cors");
-const bcrypt = require("bcrypt");
+//const bcrypt = require("bcrypt");
 
 
 // From env flie
