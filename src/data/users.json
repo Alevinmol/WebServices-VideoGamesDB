@@ -1,14 +1,17 @@
 [
     {
       "username": "casey-h_cse341",
-      "password": "dreaml1ght"
+      "password": "test341",
+      "email": "cozygame@test.com"
     },
     {
       "username": "alejandrov-m_cse341",
-      "password": ""
+      "password": "test456",
+      "email": "Switchgames@test.com"
     },
     {
       "username": "daniel-e_cse341",
-      "password": "test123"
+      "password": "test123",
+      "email": "games@test.com"
     }
   ]

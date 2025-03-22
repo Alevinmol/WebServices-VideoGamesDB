@@ -5,24 +5,24 @@
     "title": "CSE 341 Final Video Game API",
     "description": "Project API for BYU-Idaho CSE 341 Winter 2025",
     "contact": {
-      "name": "API Support - Casey Heyrend, Daniel Emerson, and Alejandro Vinay Mollinedo",
-      "email": "hey12008@byui.edu, @byui.edu, and @byui.edu"
+      "name": "API Support - Casey Heyrend, Daniel Emerson, and Alejandro Vinay Mollinedo ",
+      "email": "hey12008@byui.edu, @byui.edu, and  @byui.edu"
     },
     "license": {
       "name": "MIT",
       "url": "https://opensource.org/license/mit"
     }
   },
-"servers": [
-  {
-    "url": "http://localhost:8080",
-    "description": "Local development server"
-  },
-  {
-    "url": "https://webservices-videogamesdb-age0.onrender.com",
-    "description": "Production server"
-  }
-],
+  "servers": [
+    {
+      "url": "https://webservices-videogamesdb-age0.onrender.com",
+      "description": "Production server"
+    },
+    {
+      "url": "http://localhost:8080",
+      "description": "Local development server"
+    }
+  ],
   "tags": [
     {
       "name": "Games",
@@ -157,11 +157,7 @@
     },
     "/users/": {
       "get": {
-        "tags": [
-          "Users"
-        ],
-        "summary": "Get all Users",
-        "description": "Endpoint to get all users from the database.",
+        "description": "",
         "responses": {
           "200": {
             "description": "OK"
@@ -172,11 +168,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Users"
-        ],
-        "summary": "Add or Update a User",
-        "description": "Endpoint to add or update a user in the database.",
+        "description": "",
         "responses": {
           "200": {
             "description": "OK"
@@ -209,11 +201,7 @@
     },
     "/users/{username}": {
       "get": {
-        "tags": [
-          "Users"
-        ],
-        "summary": "Get a User by Username",
-        "description": "Endpoint  to get a user by username from the database.",
+        "description": "",
         "parameters": [
           {
             "name": "username",
@@ -237,11 +225,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Users"
-        ],
-        "summary": "Add or Update a User",
-        "description": "Endpoint to add or update a user in the database.",
+        "description": "",
         "parameters": [
           {
             "name": "username",
@@ -282,11 +266,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Users"
-        ],
-        "summary": "Delete a User by Username",
-        "description": "Endpoint to delete a user by username from the database.",
+        "description": "",
         "parameters": [
           {
             "name": "username",
@@ -310,9 +290,21 @@
         }
       }
     },
+    "/users/search": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/{id}": {
       "put": {
-        "tags": ["Games"],
+        "tags": [
+          "Games"
+        ],
         "summary": "Add or Update a Game",
         "description": "Endpoint to add or update a game in the database.",
         "parameters": [
@@ -325,114 +317,54 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
                 "type": "object",
                 "properties": {
-                  "gameTitle": { "example": "any" },
-                  "consoles": { "example": "any" },
-                  "developer": { "example": "any" },
-                  "publisher": { "example": "any" },
-                  "genre": { "example": "any" },
-                  "shortSummary": { "example": "any" },
-                  "rating": { "example": "any" },
-                  "releaseDate": { "example": "any" },
-                  "recommended": { "example": "any" }
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": { "description": "OK" },
-          "400": { "description": "Bad Request" },
-          "500": { "description": "Internal Server Error" }
-        }
-      }
-    },
-    "/users/{username}": {
-      "get": {
-        "tags": ["Users"],
-        "summary": "Get user by username",
-        "description": "Retrieve a user by their username",
-        "parameters": [
-          {
-            "name": "username",
-            "in": "path",
-            "required": true,
-            "description": "The username of the user to retrieve",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "User found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/User"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "User not found"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/users/search": {
-      "get": {
-        "tags": ["Users"],
-        "summary": "Search for users",
-        "description": "Search for users by name or email",
-        "parameters": [
-          {
-            "name": "query",
-            "in": "query",
-            "required": true,
-            "description": "Search term for name or email",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful search",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/User"
+                  "gameTitle": {
+                    "example": "any"
+                  },
+                  "consoles": {
+                    "example": "any"
+                  },
+                  "developer": {
+                    "example": "any"
+                  },
+                  "publisher": {
+                    "example": "any"
+                  },
+                  "genre": {
+                    "example": "any"
+                  },
+                  "shortSummary": {
+                    "example": "any"
+                  },
+                  "rating": {
+                    "example": "any"
+                  },
+                  "releaseDate": {
+                    "example": "any"
+                  },
+                  "recommended": {
+                    "example": "any"
                   }
                 }
               }
             }
-          },
-          "400": { "description": "Bad Request" },
-          "500": { "description": "Internal Server Error" }
-        }
-      }
-    }
-  },
-  "components": {
-    "schemas": {
-      "User": {
-        "type": "object",
-        "properties": {
-          "username": { "type": "string" },
-          "password": { "type": "string" },
-          "email": { "type": "string" },
-          "name": { "type": "string" }
+          }
         }
       }
     }

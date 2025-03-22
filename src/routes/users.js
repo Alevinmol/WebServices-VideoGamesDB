@@ -1,14 +1,14 @@
 const express = require("express");
 const router = express.Router();
 
-const usersController = require("../controllers/userscontroller");
+const usersController = require("../controllers/usersController");
 
 // Get all users
 router.get("/", usersController.getAllUsers);
 
 
 // Get a user by username
-router.get("/:username", userController.getUser);
+router.get("/:username", usersController.getUser);
 
 // Get a user by ID
 router.get("/:username", usersController.getUser);
@@ -19,10 +19,10 @@ router.post("/", usersController.addOrUpdateUser);
 
 
 // Update a user by username
-router.put("/:username", userController.addOrUpdateUser);
+router.put("/:username", usersController.addOrUpdateUser);
 
 // Delete a user by username
-router.delete("/:username", userController.deleteUser);
+router.delete("/:username", usersController.deleteUser);
 
 // Update a user by ID
 router.put("/:username", usersController.addOrUpdateUser);
@@ -32,6 +32,6 @@ router.delete("/:username", usersController.deleteUser);
 
 
 // 🔹 Add a search endpoint for users
-router.get("/search", userController.searchUsers);
+router.get("/search", usersController.searchUsers);
 
 module.exports = router;
