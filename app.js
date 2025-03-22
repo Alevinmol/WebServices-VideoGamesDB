@@ -42,7 +42,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use("/", require("./src/routes"));
 app.use("/games", require("./src/routes/games"));
 app.use("/consoles", require("./src/routes/consoles"));
-app.use("/users", require("./src/routes/users"));
+//app.use("/users", require("./src/routes/users"));
 
 app.use(express.static("public"));
 
