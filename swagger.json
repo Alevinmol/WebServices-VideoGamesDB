@@ -42,7 +42,275 @@
     }
   ],
   "paths": {
-    "/games/{id}": {
+    "/consoles/": {
+      "get": {
+        "tags": [
+          "Consoles"
+        ],
+        "summary": "Get all Consoles",
+        "description": "Endpoint to get all consoles from the database.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Consoles"
+        ],
+        "summary": "Add or Update a Console",
+        "description": "Endpoint to add or update a console in the database.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "console": {
+                    "example": "any"
+                  },
+                  "company": {
+                    "example": "any"
+                  },
+                  "intro": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/consoles/{id}": {
+      "get": {
+        "tags": [
+          "Consoles"
+        ],
+        "summary": "Get a Console by Name",
+        "description": "Endpoint to get a console by name from the database.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Consoles"
+        ],
+        "summary": "Delete a Console",
+        "description": "Endpoint to delete a console from the database.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/users/": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Get all Users",
+        "description": "Endpoint to get all users from the database.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Add or Update a User",
+        "description": "Endpoint to add or update a user in the database.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "example": "any"
+                  },
+                  "password": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/{username}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Get a User by Username",
+        "description": "Endpoint  to get a user by username from the database.",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Add or Update a User",
+        "description": "Endpoint to add or update a user in the database.",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "example": "any"
+                  },
+                  "password": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Delete a User by Username",
+        "description": "Endpoint to delete a user by username from the database.",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/{id}": {
       "put": {
         "tags": ["Games"],
         "summary": "Add or Update a Game",
