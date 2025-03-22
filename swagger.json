@@ -160,47 +160,14 @@
         "tags": [
           "Users"
         ],
-        "description": "",
+        "summary": "Get all users",
+        "description": "Returns all users in the database",
         "responses": {
           "200": {
             "description": "OK"
           },
           "500": {
             "description": "Internal Server Error"
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Users"
-        ],
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "username": {
-                    "example": "any"
-                  },
-                  "password": {
-                    "example": "any"
-                  }
-                }
-              }
-            }
           }
         }
       }
@@ -210,7 +177,8 @@
         "tags": [
           "Users"
         ],
-        "description": "",
+        "summary": " Get a user by username",
+        "description": " Get a user by username",
         "parameters": [
           {
             "name": "username",
@@ -237,7 +205,8 @@
         "tags": [
           "Users"
         ],
-        "description": "",
+        "summary": "Add or update a user (with password hashing)",
+        "description": "Add or update a user (with password hashing)",
         "parameters": [
           {
             "name": "username",
@@ -270,6 +239,12 @@
                   },
                   "password": {
                     "example": "any"
+                  },
+                  "email": {
+                    "example": "any"
+                  },
+                  "name": {
+                    "example": "any"
                   }
                 }
               }
@@ -281,7 +256,8 @@
         "tags": [
           "Users"
         ],
-        "description": "",
+        "summary": "Delete a user by username",
+        "description": "Delete a user by username",
         "parameters": [
           {
             "name": "username",
@@ -310,7 +286,8 @@
         "tags": [
           "Users"
         ],
-        "description": "",
+        "summary": "Search users by name or email",
+        "description": "Search users by name or email.",
         "parameters": [
           {
             "name": "query",

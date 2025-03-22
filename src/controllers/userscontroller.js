@@ -3,11 +3,15 @@ const User = require("../models/users");
 const bcrypt = require("bcrypt");
 
 
-
 const usersController = {};
 
 // Get all users
 usersController.getAllUsers = async (req, res) => {
+    /*
+    #swagger.summary = "Get all users"
+    #swagger.description = "Returns all users in the database"
+    #swagger.tags = ['Users']
+    */
     try {
         const users = await User.find();
         res.status(200).json(users);
@@ -19,6 +23,11 @@ usersController.getAllUsers = async (req, res) => {
 
 // Get a user by username
 usersController.getUser = async (req, res) => {
+        /*
+    #swagger.summary = " Get a user by username"
+    #swagger.description = " Get a user by username"
+    #swagger.tags = ['Users']
+    */
     try {
         const { username } = req.params;
         const user = await User.findOne({ username });
@@ -36,10 +45,15 @@ usersController.getUser = async (req, res) => {
 
 // Add or update a user (with password hashing)
 usersController.addOrUpdateUser = async (req, res) => {
+        /*
+    #swagger.summary = "Add or update a user (with password hashing)"
+    #swagger.description = "Add or update a user (with password hashing)"
+    #swagger.tags = ['Users']
+    */
     try {
-        const { username, password } = req.body;
+        const { username, password, email, name } = req.body;
 
-        if (!username || !password) {
+        if (!username || !password || !email || !name) {
             return res.status(400).json({ error: "All required fields must be provided." });
         }
 
@@ -61,6 +75,11 @@ usersController.addOrUpdateUser = async (req, res) => {
 
 // Delete a user by username
 usersController.deleteUser = async (req, res) => {
+        /*
+    #swagger.summary = "Delete a user by username"
+    #swagger.description = "Delete a user by username"
+    #swagger.tags = ['Users']
+    */
     try {
         const { username } = req.params;
         const user = await User.findOneAndDelete({ username });
@@ -78,6 +97,11 @@ usersController.deleteUser = async (req, res) => {
 
 // Search users by name or email
 usersController.searchUsers = async (req, res) => {
+        /*
+    #swagger.summary = "Search users by name or email"
+    #swagger.description = "Search users by name or email."
+    #swagger.tags = ['Users']
+    */
     try {
         const { query } = req.query;
         if (!query) {
