@@ -21,6 +21,7 @@ usersController.getAllUsers = async (req, res) => {
     }
 };
 
+
 // Get a user by username
 usersController.getUser = async (req, res) => {
         /*
