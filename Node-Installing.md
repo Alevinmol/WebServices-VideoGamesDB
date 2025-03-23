@@ -27,5 +27,9 @@ npm install bcrypt
 
 npm install bcryptjs
 
+npm install --save-dev jest
 
+npm install cookie-parser
+
+npm install supertest --save-dev
 
