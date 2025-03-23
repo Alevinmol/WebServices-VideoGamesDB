@@ -310,7 +310,7 @@
         }
       }
     },
-    "/{id}": {
+    "/games/{id}": {
       "put": {
         "tags": [
           "Games"
