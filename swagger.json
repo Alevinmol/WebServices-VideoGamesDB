@@ -15,12 +15,12 @@
   },
   "servers": [
     {
-      "url": "https://webservices-videogamesdb-age0.onrender.com",
-      "description": "Production server"
-    },
-    {
       "url": "http://localhost:8080",
       "description": "Local development server"
+    },
+    {
+      "url": "https://webservices-videogamesdb-age0.onrender.com",
+      "description": "Production server"
     }
   ],
   "tags": [
