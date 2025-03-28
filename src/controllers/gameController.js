@@ -16,6 +16,25 @@ gameController.getAllGames = async (req, res) => {
         res.status(500).json({ error: "Internal Server Error" });
     }
 };
+// Get a game by ID
+gameController.getGame = async (req, res) => {
+    /*
+    #swagger.summary = "Get a game by ID"
+    #swagger.description = "Returns a game by its ID"
+    #swagger.tags = ['Games']
+    */
+    try {
+        const gameId = req.params.id;
+        const game = await Game.findById(gameId);
+        if (!game) {
+            return res.status(404).json({ error: "Game not found" });
+        }
+        res.status(200).json(game);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+};
 // Controller to add or update a game
 gameController.addOrUpdateGame = async (req, res) => {
         /*
@@ -58,6 +77,25 @@ gameController.addOrUpdateGame = async (req, res) => {
 
         res.status(200).json({ message: "Game added/updated successfully!", game });
 
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+};
+// Controller to delete a game by ID
+gameController.deleteGame = async (req, res) => {
+    /*
+    #swagger.summary = "Delete a game by ID"
+    #swagger.description = "Deletes a game by its ID"
+    #swagger.tags = ['Games']
+    */
+    try {
+        const gameId = req.params.id;
+        const game = await Game.findByIdAndDelete(gameId);
+        if (!game) {
+            return res.status(404).json({ error: "Game not found" });
+        }
+        res.status(200).json({ message: "Game deleted successfully!" });
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: "Internal Server Error" });
