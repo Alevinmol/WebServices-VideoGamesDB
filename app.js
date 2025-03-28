@@ -45,6 +45,7 @@ app.use("/", require("./src/routes"));
 app.use("/games", require("./src/routes/games"));
 app.use("/consoles", require("./src/routes/consoles"));
 app.use("/users", require("./src/routes/users"));
+app.use("/copies", require("./src/routes/copies"));
 
 app.use(express.static("public"));
 

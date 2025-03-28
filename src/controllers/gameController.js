@@ -1,6 +1,21 @@
 const Game = require("../models/game");
 
 const gameController = {}
+// Get all games
+gameController.getAllGames = async (req, res) => {
+    /*
+    #swagger.summary = "Get all games"
+    #swagger.description = "Returns all games in the database"
+    #swagger.tags = ['Games']
+    */
+    try {
+        const games = await Game.find();
+        res.status(200).json(games);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+};
 // Controller to add or update a game
 gameController.addOrUpdateGame = async (req, res) => {
         /*
