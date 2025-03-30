@@ -43,7 +43,25 @@ const doc = {
     "name": "Copies",
     "description": "Operations about Copies"
   }
-], 
+],
+components: {
+  securitySchemes: {
+    openIdConnect: {
+      type: "oauth2",
+      flows: {
+        authorizationCode: {
+          authorizationUrl: "",//Go to https://www.oauth.com/settings then go to Avanced Settings and Go to Endpoints
+          tokenUrl: "",//Go to https://www.oauth.com/settings then go to Avanced Settings and Go to Endpoints
+          scopes: {
+            read: "Grants read access",
+            write: "Grants write access",
+            admin: "Grants access to admin operations",
+          },
+        },
+      },
+    },
+  },
+},
   };
   
   // Output file
