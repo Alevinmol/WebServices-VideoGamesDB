@@ -7,6 +7,7 @@ router.get("/", gameController.getAllGames);
 // GET request for one game
 router.get("/:id", gameController.getGame);
 // POST request to add a new game 
+router.put("/", gameController.addOrUpdateGame);
  // PUT request to add or update a game
 router.put("/:id", gameController.addOrUpdateGame);
 // DELETE request to delete a game
