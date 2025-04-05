@@ -820,5 +820,23 @@
         }
       }
     }
+  },
+  "components": {
+    "securitySchemes": {
+      "openIdConnect": {
+        "type": "oauth2",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "",
+            "tokenUrl": "",
+            "scopes": {
+              "read": "Grants read access",
+              "write": "Grants write access",
+              "admin": "Grants access to admin operations"
+            }
+          }
+        }
+      }
+    }
   }
 }
