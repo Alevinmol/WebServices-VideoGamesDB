@@ -827,8 +827,8 @@
         "type": "oauth2",
         "flows": {
           "authorizationCode": {
-            "authorizationUrl": "",
-            "tokenUrl": "",
+            "authorizationUrl": "https://dev-0mjb6z0ehoq3g85o.us.auth0.com/authorize",
+            "tokenUrl": "https://dev-0mjb6z0ehoq3g85o.us.auth0.com/oauth/token",
             "scopes": {
               "read": "Grants read access",
               "write": "Grants write access",

@@ -50,8 +50,8 @@ components: {
       type: "oauth2",
       flows: {
         authorizationCode: {
-          authorizationUrl: "",//Go to https://www.oauth.com/settings then go to Avanced Settings and Go to Endpoints
-          tokenUrl: "",//Go to https://www.oauth.com/settings then go to Avanced Settings and Go to Endpoints
+          authorizationUrl: "https://dev-0mjb6z0ehoq3g85o.us.auth0.com/authorize",//Go to https://www.oauth.com/settings then go to Avanced Settings and Go to Endpoints
+          tokenUrl: "https://dev-0mjb6z0ehoq3g85o.us.auth0.com/oauth/token",//Go to https://www.oauth.com/settings then go to Avanced Settings and Go to Endpoints
           scopes: {
             read: "Grants read access",
             write: "Grants write access",
