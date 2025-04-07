@@ -72,6 +72,7 @@ consolesController.deleteConsole = async (req, res) => {
     #swagger.summary = "Delete a Console"
     #swagger.description = "Endpoint to delete a console from the database."
     #swagger.tags = ['Consoles']
+    #swagger.security = [ {"OAuth2": ["admin"]}]
     */
     try {
         const { console } = req.params;

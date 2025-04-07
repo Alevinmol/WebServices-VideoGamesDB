@@ -764,24 +764,17 @@
           "500": {
             "description": "Internal Server Error"
           }
-        },
-        "security": [
-          {
-            "OAuth2": [
-              "read"
-            ]
-          }
-        ]
+        }
       },
-      "post": {
+      "put": {
         "tags": [
           "Games"
         ],
-        "summary": "Add a new game",
-        "description": "Adds a game",
+        "summary": "Add or Update a Game",
+        "description": "Endpoint to add or update a game in the database.",
         "responses": {
-          "201": {
-            "description": "Created"
+          "200": {
+            "description": "OK"
           },
           "400": {
             "description": "Bad Request"
