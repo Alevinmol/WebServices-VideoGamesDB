@@ -10,6 +10,7 @@ usersController.getAllUsers = async (req, res) => {
     #swagger.summary = "Get all users"
     #swagger.description = "Returns all users in the database"
     #swagger.tags = ['Users']
+    #swagger.security = [{ "OAuth2": ["read"]}]
     */
     try {
         const users = await User.find();
@@ -27,6 +28,7 @@ usersController.getUser = async (req, res) => {
     #swagger.summary = " Get a user by username"
     #swagger.description = " Get a user by username"
     #swagger.tags = ['Users']
+    #swagger.security = [{"OAuth2": ["read"] }]
     */
     try {
         const { username } = req.params;
@@ -43,12 +45,13 @@ usersController.getUser = async (req, res) => {
     }
 };
 
-// Add or update a user (with password hashing)
-usersController.addOrUpdateUser = async (req, res) => {
+// Update a user (with password hashing)
+usersController.updateUser = async (req, res) => {
         /*
-    #swagger.summary = "Add or update a user (with password hashing)"
-    #swagger.description = "Add or update a user (with password hashing)"
+    #swagger.summary = "Update a user (with password hashing)"
+    #swagger.description = "Update a user (with password hashing)"
     #swagger.tags = ['Users']
+    #swagger.security = [{"OAuth2": ["write"] }]
     */
     try {
         const { username, password, email, name } = req.body;
@@ -65,7 +68,7 @@ usersController.addOrUpdateUser = async (req, res) => {
             { new: true, upsert: true }
         );
 
-        res.status(200).json({ message: "User added/updated successfully!", user });
+        res.status(200).json({ message: "User updated successfully!", user });
 
     } catch (err) {
         console.error(err);
@@ -79,6 +82,7 @@ usersController.addUser = async (req, res) => {
 #swagger.summary = "Add (with password hashing)"
 #swagger.description = "Add or update a user (with password hashing)"
 #swagger.tags = ['Users']
+#swagger.security = [{"OAuth2": ["write"] }]
 */
 try {
     const { username, password, email, name } = req.body;

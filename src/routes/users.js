@@ -22,7 +22,7 @@ router.post("/", requiresAuth(),usersController.addUser);
 // Delete a user by username
 //router.delete("/:username", usersController.deleteUser);
 // Update a user by ID
-router.put("/:username",requiresAuth(), usersController.addOrUpdateUser);
+router.put("/:username",requiresAuth(), usersController.updateUser);
 
 // Delete a user by ID
 router.delete("/:username",requiresAuth(), usersController.deleteUser);
