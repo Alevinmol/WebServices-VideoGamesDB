@@ -9,7 +9,7 @@ copiesController.getAllCopies = async (req, res) => {
     #swagger.tags = ['Copies']
     */
     try {
-        const copies = await Copies.find();
+        const copies = await Copy.find();
         res.status(200).json(copies);
     } catch (err) {
         console.error(err);
@@ -24,8 +24,8 @@ copiesController.getCopyByGameTitle = async (req, res) => {
     #swagger.tags = ['Copies']
     */
     try {
-        const { gameTitle } = req.params;
-        const copy = await Copies.findOne({ gameTitle });
+        const copyId = req.params.id;
+        const copy = await Copy.findById(copyId);
 
         if (!copy) {
             return res.status(404).json({ error: "Copy not found" });
@@ -58,7 +58,7 @@ copiesController.addOrUpdateCopy = async (req, res) => {
             consoles
         };
 
-        const copy = await Copies.findOneAndUpdate({ gameTitle }, copyData, { new: true, upsert: true });
+        const copy = await Copy.findOneAndUpdate({ gameTitle }, copyData, { new: true, upsert: true });
 
         res.status(200).json(copy);
     } catch (err) {
@@ -74,8 +74,8 @@ copiesController.deleteCopy = async (req, res) => {
     #swagger.tags = ['Copies']
     */
     try {
-        const { gameTitle } = req.params;
-        const copy = await Copies.findOneAndDelete({ gameTitle });
+        const copyId = req.params.id;
+        const copy = await Copy.findOneAndDelete(copyId);
 
         if (!copy) {
             return res.status(404).json({ error: "Copy not found" });

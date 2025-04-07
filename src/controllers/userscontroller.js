@@ -73,6 +73,36 @@ usersController.addOrUpdateUser = async (req, res) => {
     }
 };
 
+// Add a user (with password hashing)
+usersController.addUser = async (req, res) => {
+    /*
+#swagger.summary = "Add (with password hashing)"
+#swagger.description = "Add or update a user (with password hashing)"
+#swagger.tags = ['Users']
+*/
+try {
+    const { username, password, email, name } = req.body;
+
+    if (!username || !password || !email || !name) {
+        return res.status(400).json({ error: "All required fields must be provided." });
+    }
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const user = await User.findOneAndUpdate(
+        { username },
+        { username, password: hashedPassword },
+        { new: true, upsert: true }
+    );
+
+    res.status(200).json({ message: "User added successfully!", user });
+
+} catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Internal Server Error" });
+}
+};
+
 // Delete a user by username
 usersController.deleteUser = async (req, res) => {
         /*

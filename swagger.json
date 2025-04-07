@@ -56,17 +56,24 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "read"
+            ]
+          }
+        ]
       },
-      "put": {
+      "post": {
         "tags": [
           "Games"
         ],
-        "summary": "Add or Update a Game",
-        "description": "Endpoint to add or update a game in the database.",
+        "summary": "Add a new game",
+        "description": "Adds a game",
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
           },
           "400": {
             "description": "Bad Request"
@@ -255,6 +262,44 @@
           }
         }
       },
+      "put": {
+        "tags": [
+          "Consoles"
+        ],
+        "summary": "Add or Update a Console",
+        "description": "Endpoint to add or update a console in the database.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "console": {
+                    "example": "any"
+                  },
+                  "company": {
+                    "example": "any"
+                  },
+                  "intro": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "post": {
         "tags": [
           "Consoles"
@@ -365,6 +410,47 @@
           },
           "500": {
             "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Add (with password hashing)",
+        "description": "Add or update a user (with password hashing)",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "example": "any"
+                  },
+                  "password": {
+                    "example": "any"
+                  },
+                  "email": {
+                    "example": "any"
+                  },
+                  "name": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -523,6 +609,47 @@
           }
         }
       },
+      "post": {
+        "tags": [
+          "Copies"
+        ],
+        "summary": "Add or update a copy",
+        "description": "Add or update a copy",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "downloaded": {
+                    "example": "any"
+                  },
+                  "physical": {
+                    "example": "any"
+                  },
+                  "gameTitle": {
+                    "example": "any"
+                  },
+                  "consoles": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "put": {
         "tags": [
           "Copies"
@@ -637,17 +764,24 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "read"
+            ]
+          }
+        ]
       },
-      "put": {
+      "post": {
         "tags": [
           "Games"
         ],
-        "summary": "Add or Update a Game",
-        "description": "Endpoint to add or update a game in the database.",
+        "summary": "Add a new game",
+        "description": "Adds a game",
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
           },
           "400": {
             "description": "Bad Request"
