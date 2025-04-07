@@ -61,7 +61,7 @@ usersController.addOrUpdateUser = async (req, res) => {
 
         const user = await User.findOneAndUpdate(
             { username },
-            { username, password: hashedPassword },
+            { username, password: hashedPassword, email, name },
             { new: true, upsert: true }
         );
 

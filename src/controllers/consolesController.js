@@ -26,8 +26,8 @@ consolesController.getConsole = async (req, res) => {
     #swagger.tags = ['Consoles']
     */
     try {
-        const { console } = req.params;
-        const consoleData = await Console.findOne({ console });
+        const consoleId = req.params.id;
+        const consoleData = await Console.findById(consoleId);
         if (!consoleData) {
             return res.status(404).json({ error: "Console not found" });
         }
@@ -75,8 +75,8 @@ consolesController.deleteConsole = async (req, res) => {
     #swagger.security = [ {"OAuth2": ["admin"]}]
     */
     try {
-        const { console } = req.params;
-        const consoleData = await Console.findOneAndDelete({ console });
+        const consoleId = req.params.id;
+        const consoleData = await Console.findOneAndDelete(consoleId);
         if (!consoleData) {
             return res.status(404).json({ error: "Console not found" });
         }
