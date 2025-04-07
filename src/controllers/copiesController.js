@@ -72,6 +72,7 @@ copiesController.deleteCopy = async (req, res) => {
     #swagger.summary = "Delete a copy"
     #swagger.description = "Delete a copy"
     #swagger.tags = ['Copies']
+    #swagger.security = [ {"OAuth2": ["admin"]}]
     */
     try {
         const { gameTitle } = req.params;
