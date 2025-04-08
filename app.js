@@ -58,7 +58,7 @@ app.use((req, res, next) => {
 
   app.get("/logout", (req, res) => {
     // Logs out the user and redirects to the home page or any page you want
-    res.oidc.logout({ returnTo: process.env.BASE_URL || "http://localhost:3000" });
+    res.oidc.logout({ returnTo: process.env.BASE_URL || "http://localhost:8080" });
   });  
 
 // Swagger
