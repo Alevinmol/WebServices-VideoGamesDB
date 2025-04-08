@@ -82,6 +82,13 @@
             "description": "Internal Server Error"
           }
         },
+        "security": [
+          {
+            "OAuth2": [
+              "write"
+            ]
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -149,7 +156,14 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "read"
+            ]
+          }
+        ]
       },
       "put": {
         "tags": [
@@ -178,6 +192,13 @@
             "description": "Internal Server Error"
           }
         },
+        "security": [
+          {
+            "OAuth2": [
+              "write"
+            ]
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -243,7 +264,14 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "admin"
+            ]
+          }
+        ]
       }
     },
     "/consoles/": {
@@ -252,7 +280,7 @@
           "Consoles"
         ],
         "summary": "Get all Consoles",
-        "description": "Endpoint to get all consoles from the database.",
+        "description": "Get all consoles from the database.",
         "responses": {
           "200": {
             "description": "OK"
@@ -260,14 +288,21 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "read"
+            ]
+          }
+        ]
       },
       "put": {
         "tags": [
           "Consoles"
         ],
         "summary": "Add or Update a Console",
-        "description": "Endpoint to add or update a console in the database.",
+        "description": " Add or update a console in the database.",
         "responses": {
           "200": {
             "description": "OK"
@@ -279,6 +314,13 @@
             "description": "Internal Server Error"
           }
         },
+        "security": [
+          {
+            "OAuth2": [
+              "write"
+            ]
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -305,7 +347,7 @@
           "Consoles"
         ],
         "summary": "Add or Update a Console",
-        "description": "Endpoint to add or update a console in the database.",
+        "description": " Add or update a console in the database.",
         "responses": {
           "200": {
             "description": "OK"
@@ -317,6 +359,13 @@
             "description": "Internal Server Error"
           }
         },
+        "security": [
+          {
+            "OAuth2": [
+              "write"
+            ]
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -345,7 +394,7 @@
           "Consoles"
         ],
         "summary": "Get a Console by Name",
-        "description": "Endpoint to get a console by name from the database.",
+        "description": "get a console by name from the database.",
         "parameters": [
           {
             "name": "id",
@@ -366,14 +415,21 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "read"
+            ]
+          }
+        ]
       },
       "delete": {
         "tags": [
           "Consoles"
         ],
         "summary": "Delete a Console",
-        "description": "Endpoint to delete a console from the database.",
+        "description": "Delete a console from the database.",
         "parameters": [
           {
             "name": "id",
@@ -394,7 +450,14 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "admin"
+            ]
+          }
+        ]
       }
     },
     "/users/": {
@@ -411,7 +474,14 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "read"
+            ]
+          }
+        ]
       },
       "post": {
         "tags": [
@@ -430,6 +500,13 @@
             "description": "Internal Server Error"
           }
         },
+        "security": [
+          {
+            "OAuth2": [
+              "write"
+            ]
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -482,14 +559,21 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "read"
+            ]
+          }
+        ]
       },
       "put": {
         "tags": [
           "Users"
         ],
-        "summary": "Add or update a user (with password hashing)",
-        "description": "Add or update a user (with password hashing)",
+        "summary": "Update a user (with password hashing)",
+        "description": "Update a user (with password hashing)",
         "parameters": [
           {
             "name": "username",
@@ -511,6 +595,13 @@
             "description": "Internal Server Error"
           }
         },
+        "security": [
+          {
+            "OAuth2": [
+              "write"
+            ]
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -561,7 +652,14 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "admin"
+            ]
+          }
+        ]
       }
     },
     "/users/search": {
@@ -607,7 +705,14 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "read"
+            ]
+          }
+        ]
       },
       "post": {
         "tags": [
@@ -626,6 +731,13 @@
             "description": "Internal Server Error"
           }
         },
+        "security": [
+          {
+            "OAuth2": [
+              "write"
+            ]
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -667,6 +779,13 @@
             "description": "Internal Server Error"
           }
         },
+        "security": [
+          {
+            "OAuth2": [
+              "write"
+            ]
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -719,7 +838,14 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "read"
+            ]
+          }
+        ]
       },
       "delete": {
         "tags": [
@@ -747,7 +873,14 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "OAuth2": [
+              "admin"
+            ]
+          }
+        ]
       }
     }
   },
