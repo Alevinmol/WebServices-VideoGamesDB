@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nodemon app.js",
     "swagger": "node ./swagger.js",
-    "test": "jest --watch --coverage"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
